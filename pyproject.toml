@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vdp-protocol"
+version = "2.2.0"
+description = "Deterministic reference implementation for VdP tensor protocol v2.2 (FIXED)"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy==1.26.4",
+  "scipy==1.11.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==7.4.4",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
